@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Heart, Clock, Shield, Video, CheckCircle, ArrowRight, Phone } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import DisclaimerPopup from "@/components/DisclaimerPopup";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const Home = () => {
@@ -16,7 +17,7 @@ const Home = () => {
     {
       icon: Video,
       title: "AI-Powered Consultations",
-      description: "Advanced virtual doctor technology for accurate guidance",
+      description: "Advanced virtual assistant technology for accurate guidance",
     },
     {
       icon: Shield,
@@ -41,6 +42,7 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background to-secondary/20">
+      <DisclaimerPopup />
       <Navigation />
 
       {/* Hero Section */}
@@ -72,7 +74,7 @@ const Home = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in">
               <Link to="/virtual-doctor">
                 <Button variant="hero" size="xl" className="rounded-full group">
-                  Talk with Virtual Doctor
+                  Talk with Virtual Assistant
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
@@ -87,6 +89,46 @@ const Home = () => {
                   Learn More
                 </Button>
               </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission Section */}
+      <section className="py-20 lg:py-32 bg-gradient-to-br from-primary/5 to-accent/5">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              Our Mission
+            </h2>
+          </div>
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              AI Health & Happiness is part of the Shah Happiness Foundation, a charitable organization dedicated to bringing "Goodness to All" through accessible healthcare, education, and community support. We believe that quality health information should be available to everyone, regardless of their location, language, literacy level, or economic status. Our AI-powered medical assistants provide free, 24/7 health guidance in multiple Indian languages, making healthcare more accessible to underserved communities. Through this platform, we aim to empower individuals with knowledge about their health, help them make informed decisions, and guide them to seek professional medical care when needed.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Demo Video Section */}
+      <section className="py-20 lg:py-32">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              See How It Works
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Watch our demo to see how AI Health & Happiness can help you
+            </p>
+          </div>
+          <div className="max-w-5xl mx-auto">
+            <div className="relative" style={{ paddingBottom: '56.25%', height: 0 }}>
+              <iframe
+                src="https://drive.google.com/file/d/1b6OeM4TXtqJ-tHNnyqA3jVLEuv7QftGh/preview"
+                allow="autoplay; fullscreen"
+                className="absolute top-0 left-0 w-full h-full rounded-xl shadow-lg"
+                style={{ minHeight: '500px' }}
+              ></iframe>
             </div>
           </div>
         </div>
